@@ -1,10 +1,10 @@
 // Kalo Pake Lokal
-// import BASE_URL from '@/lib/baseUrl';
+import BASE_URL from '@/lib/baseUrl';
 
 export const getDetailBookById = async (id) => {
   try {
-    // Buat Locale => const response = await fetch(`${BASE_URL}/api/books/${id}`);
-    const response = await fetch(`/api/books/${id}`);
+    const response = await fetch(`${BASE_URL}/api/books/${id}`);
+    // const response = await fetch(`/api/books/${id}`);
     const data = await response.json();
     return data;
   } catch (err) {
@@ -15,8 +15,8 @@ export const getDetailBookById = async (id) => {
 export const updateBook = async (id, newData) => {
   console.log(id, newData);
   try {
-    // Buat Locale => const response = await fetch(`${BASE_URL}/api/books/${id}`, {
-    const response = await fetch(`/api/books/${id}`, {
+    const response = await fetch(`${BASE_URL}/api/books/${id}`, {
+      // const response = await fetch(`/api/books/${id}`, {
       method: 'PUT',
       body: JSON.stringify(newData),
     });
@@ -29,8 +29,8 @@ export const updateBook = async (id, newData) => {
 
 export const deleteBook = async (id) => {
   try {
-    // const response = await fetch(`${BASE_URL}/api/books/${id}`, {
-    const response = await fetch(`/api/books/${id}`, {
+    const response = await fetch(`${BASE_URL}/api/books/${id}`, {
+      // const response = await fetch(`/api/books/${id}`, {
       method: 'DELETE',
     });
 
@@ -42,8 +42,8 @@ export const deleteBook = async (id) => {
 
 export const createBook = async (formData) => {
   try {
-    // Buat Locale => const response = await fetch(`${BASE_URL}/api/books`, {
-    const response = await fetch(`/api/books`, {
+    const response = await fetch(`${BASE_URL}/api/books`, {
+      // const response = await fetch(`/api/books`, {
       method: 'POST',
       body: formData,
     });

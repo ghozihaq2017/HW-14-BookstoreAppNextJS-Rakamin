@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
 import { uploadFile } from '@/lib/uploadFile';
-// import BASE_IMAGE_URL from '@/lib/baseImage'; => buat locale
+import BASE_IMAGE_URL from '@/lib/baseImage';
 
 export const GET = async (req, { params }) => {
   try {
@@ -26,7 +26,7 @@ export const POST = async (req, { params }) => {
 
     const imagePath = await uploadFile(file, '/images');
 
-    const imageUrl = `/${imagePath}`;
+    const imageUrl = `${BASE_IMAGE_URL}/${imagePath}`;
 
     const book = await prisma.book.create({
       data: {

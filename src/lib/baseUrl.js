@@ -1,8 +1,8 @@
-require('dotenv').config();
+// require('dotenv').config();
 
-const BASE_URL = process.env.BASE_URL;
+// const BASE_URL = process.env.BASE_URL;
 
 // kalo pake local ini
-// const BASE_URL = 'http://localhost:3000/api';
+const BASE_URL = 'http://localhost:3000';
 
 export default BASE_URL;
