@@ -1,4 +1,6 @@
-const BASE_IMAGE_URL = env('BASE_IMAGE_URL');
+require('dotenv').config();
+
+const BASE_IMAGE_URL = process.env.BASE_IMAGE_URL;
 
 // kalo run lokal pake ini
 // const BASE_IMAGE_URL = `http://localhost:3000`;
