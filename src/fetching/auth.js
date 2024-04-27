@@ -1,8 +1,8 @@
-import BASE_URL from '@/lib/baseUrl';
+// import BASE_URL from '@/lib/baseUrl';
 
 export const register = async (params) => {
   try {
-    const response = await fetch(`${BASE_URL}/api/register`, {
+    const response = await fetch(`/api/register`, {
       method: 'POST',
       body: JSON.stringify(params),
     });
@@ -15,7 +15,7 @@ export const register = async (params) => {
 
 export const login = async (params) => {
   try {
-    const response = await fetch(`${BASE_URL}/api/login`, {
+    const response = await fetch(`/api/login`, {
       method: 'POST',
       body: JSON.stringify(params),
     });
